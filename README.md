@@ -1,4 +1,4 @@
-# Design Pattern [단국대학교 컴퓨터공학과 자바프로그래밍]
+# Design Pattern
 
 ##강의 목차
 
