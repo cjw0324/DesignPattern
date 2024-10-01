@@ -17,16 +17,10 @@ public class MainTest {
 
         // Load fooddata
 		List<FoodData> foodDataList = new FileImporter<>(new FoodDataParseStrategy()).loadCSV("src/csv/fooddata.csv");
-
-        System.out.println("1");
-
         // Load dailyfooddata
 		List<DailyFoodData> dailyFoodDataList = new FileImporter<>(new DailyFoodDataParseStrategy(foodDataList)).loadCSV("src/csv/dailyfooddata.csv");
-        System.out.println("2");
-
         // Load dailyhealthdata
         List<DailyHealthData> dailyHealthDataList = new FileImporter<>(new DailyHealthDataParseStrategy()).loadCSV("src/csv/dailyhealthdata.csv");
-        System.out.println("3");
 
         // Subject
         DiabetesManager manager = new DiabetesManager();
@@ -42,33 +36,49 @@ public class MainTest {
         WaterIntakeHealthDataObserver wo = new WaterIntakeHealthDataObserver(2.0);
         manager.addObserver(wo);
 
-        manager.removeObserver(bo);
+        System.out.println("BloodSugar / Carbs / Insulin / Water observer");
+        for (DailyHealthData h : dailyHealthDataList) {
 
-        // Add observers
-        System.out.println("999");
+            DailyFoodData f = dailyFoodDataList.stream().filter(e ->
+                    e.getDate().equals(h.getDate())).findAny().orElse(null);
+            double totalCarbs = f.getFoods().stream().mapToDouble(e ->
+                    e.getCarbs()).sum();
+            totalCarbs += h.getCarbsIntake();
+            h.setCarbsIntake(totalCarbs);
+            double insulinDose = (h.getInsulinDose() + totalCarbs) / 10.0;
+            h.setInsulinDose(insulinDose);
+            manager.addDailyHealthData(h);
 
-        // Simulate health data updates with food integration
-        new Thread(() -> {
-            for (DailyHealthData h : dailyHealthDataList) {
-
-                DailyFoodData f = dailyFoodDataList.stream().filter(e ->
-                        e.getDate().equals(h.getDate())).findAny().orElse(null);
-                double totalCarbs = f.getFoods().stream().mapToDouble(e ->
-                        e.getCarbs()).sum();
-                totalCarbs += h.getCarbsIntake();
-                h.setCarbsIntake(totalCarbs);
-                double insulinDose = (h.getInsulinDose() + totalCarbs) / 10.0;
-                h.setInsulinDose(insulinDose);
-                manager.addDailyHealthData(h);
-
-                try {
-                    Thread.sleep(100); // Wait for 1 second before the next update
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                System.out.println("\n\n\n");
+            try {
+                Thread.sleep(100); // Wait for 1 second before the next update
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
-        }).start();
+            System.out.println("\n\n\n");
+        }
 
+        manager.removeObserver(co);
+        manager.removeObserver(wo);
+
+        System.out.println("BloodSugar / Insulin observer");
+        for (DailyHealthData h : dailyHealthDataList) {
+
+            DailyFoodData f = dailyFoodDataList.stream().filter(e ->
+                    e.getDate().equals(h.getDate())).findAny().orElse(null);
+            double totalCarbs = f.getFoods().stream().mapToDouble(e ->
+                    e.getCarbs()).sum();
+            totalCarbs += h.getCarbsIntake();
+            h.setCarbsIntake(totalCarbs);
+            double insulinDose = (h.getInsulinDose() + totalCarbs) / 10.0;
+            h.setInsulinDose(insulinDose);
+            manager.addDailyHealthData(h);
+
+            try {
+                Thread.sleep(100); // Wait for 1 second before the next update
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println("\n\n\n");
+        }
     }
 }
