@@ -18,15 +18,11 @@ public class MainTest {
         // Load fooddata
 		List<FoodData> foodDataList = new FileImporter<>(new FoodDataParseStrategy()).loadCSV("src/csv/fooddata.csv");
 
-        System.out.println("1");
-
         // Load dailyfooddata
 		List<DailyFoodData> dailyFoodDataList = new FileImporter<>(new DailyFoodDataParseStrategy(foodDataList)).loadCSV("src/csv/dailyfooddata.csv");
-        System.out.println("2");
 
         // Load dailyhealthdata
         List<DailyHealthData> dailyHealthDataList = new FileImporter<>(new DailyHealthDataParseStrategy()).loadCSV("src/csv/dailyhealthdata.csv");
-        System.out.println("3");
 
         // Subject
         DiabetesManager manager = new DiabetesManager();
