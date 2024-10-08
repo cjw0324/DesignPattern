@@ -19,8 +19,4 @@ public abstract class DollDecorator extends Doll {
         decoratedDoll.paintComponent(g);  // 장식할 객체의 paintComponent 메서드 호출
     }
 
-    public static int random() {
-        int random = (int) (Math.random() * 100 + 1);
-        return random;
-    }
 }

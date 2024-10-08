@@ -1,12 +1,27 @@
 package decorators;
 
 import java.awt.*;
+import java.util.Random;
 
 public class BallDecorator extends DollDecorator {
+
+    // 무작위 좌표와 크기를 저장하는 인스턴스 변수
+    private int x;
+    private int y;
+    private int width;
+    private int height;
 
     public BallDecorator(Doll decoratedDoll) {
         super(decoratedDoll);
         image = Toolkit.getDefaultToolkit().getImage("image/ball.png");  // 공 이미지 설정
+
+        Random rand = new Random();
+
+        x = rand.nextInt(500) + 100;
+        y = rand.nextInt(100) + 700;
+        width = rand.nextInt(600) + 100;  // 무작위 크기 (50 ~ 150)
+        height = rand.nextInt(400) + 100;  // 무작위 크기 (50 ~ 150)
+
     }
 
     @Override
@@ -18,8 +33,11 @@ public class BallDecorator extends DollDecorator {
     public void paintComponent(Graphics g) {
         super.paintComponent(g);  // 원래 인형의 이미지를 먼저 그림
         Graphics2D g2 = (Graphics2D) g;
+
+        // 무작위 위치와 크기를 결정
+
         if (image != null) {
-            g2.drawImage(image, 100+random(), 600+random(), this);  // 공 이미지를 고양이 발 밑에 추가
+            g2.drawImage(image, x, y, width, height, this);
         }
     }
 }
