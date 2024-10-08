@@ -13,7 +13,7 @@ import java.awt.event.ActionListener;
 
 public class PaperDollApp extends JFrame implements ActionListener {
     private JButton[] selectCatDogRabbit = new JButton[3]; // CAT, DOG, RABBIT 버튼 배열
-    private JButton[] buttons = new JButton[4];  // Hat, Ball, Toy, Clear 버튼 배열
+    private JButton[] buttons = new JButton[5];  // Hat, Ball, Toy, Pet Food, Clear 버튼 배열
     private Doll doll;  // 현재 선택된 인형 객체
     private Doll initialDoll; // 초기 인형 객체 (Clear 시 기본 인형으로 되돌리기 위해 사용)
     private JPanel displayPanel;  // 인형을 표시하는 패널
@@ -32,22 +32,22 @@ public class PaperDollApp extends JFrame implements ActionListener {
         displayPanel.add(doll);  // 기본 인형을 패널에 추가
 
         // buttonPanel 설정
-        JPanel buttonPanel = new JPanel(new GridLayout(1, 4));  // 장식 버튼 4개 (Hat, Ball, Toy, Clear)
+        JPanel buttonPanel = new JPanel(new GridLayout(1, 8));  // 장식 버튼 4개 (Hat, Ball, Toy, Clear)
         buttons[0] = new JButton("Hat");
         buttons[1] = new JButton("Ball");
         buttons[2] = new JButton("Toy");
-        buttons[3] = new JButton("clear");
+        buttons[3] = new JButton("PetFood");
+        buttons[4] = new JButton("Clear");
 
         // Animal 선택 버튼 패널 설정 (CAT, DOG, RABBIT)
-        JPanel animalButtonPanel = new JPanel(new GridLayout(1, 3));
         selectCatDogRabbit[0] = new JButton("CAT");
         selectCatDogRabbit[1] = new JButton("DOG");
         selectCatDogRabbit[2] = new JButton("RABBIT");
 
         // 장식 버튼에 액션 리스너 추가
-        for (int i = 0; i < buttons.length; i++) {
-            buttons[i].addActionListener(this);
-            buttonPanel.add(buttons[i]);
+        for(JButton jButton : buttons){
+            jButton.addActionListener(this);
+            buttonPanel.add(jButton);
         }
 
         // 동물 선택 버튼에 액션 리스너 추가
@@ -85,7 +85,9 @@ public class PaperDollApp extends JFrame implements ActionListener {
             doll = new BallDecorator(doll);  // Ball 장식 추가
         } else if (e.getSource() == buttons[2]) {
             doll = new ToyDecorator(doll);  // Toy 장식 추가
-        } else if (e.getSource() == buttons[3]) {  // Clear 버튼 클릭 시
+        } else if (e.getSource() == buttons[3]) {
+            doll = new PetFoodDecorator(doll);  // Pet Food 장식 추가
+        } else if (e.getSource() == buttons[4]) {  // Clear 버튼 클릭 시
             Doll cleanDoll = checkInstance(initialDoll);  // 현재 인형을 초기 상태로 되돌림
             doll = cleanDoll;
         }
