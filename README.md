@@ -29,7 +29,7 @@ Key concepts covered in this lab include:
 
 ---
 
-### Lab04: Decorator Pattern
+## Lab04: Decorator Pattern
 In this lab, we explore the **Decorator Pattern**, a structural design pattern that allows behavior to be added to individual objects, dynamically, without affecting the behavior of other objects from the same class. The pattern involves a set of decorator classes that are used to wrap concrete components.
 
 Key concepts covered in this lab include:
