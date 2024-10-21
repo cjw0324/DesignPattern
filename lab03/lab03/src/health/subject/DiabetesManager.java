@@ -20,10 +20,6 @@ public class DiabetesManager implements Subject {
             observers.add(observer);
         }
     }
-
-
-
-
     @Override
     public void removeObserver(Observer observer) {
         observers.remove(observer);
@@ -35,7 +31,6 @@ public class DiabetesManager implements Subject {
             observer.update(dailyHealthData);
         }
     }
-
     public void addDailyHealthData(DailyHealthData data) {
         this.dailyHealthData = data;
         notifyObservers();
