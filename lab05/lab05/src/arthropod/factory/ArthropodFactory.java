@@ -1,11 +1,13 @@
+// 2024-10-22 1분반 최재우 32184682
+
 package arthropod.factory;
 
 import arthropod.builder.Arthropod;
 
-
 public class ArthropodFactory {
+
     // ArthropodType을 기반으로 기본 Arthropod 객체 생성
-// ArthropodType에 따라 해당 Arthropod 객체를 생성
+    // ArthropodType에 따라 해당 Arthropod 객체를 생성
     public static Arthropod create(ArthropodType arthropodType) {
         switch (arthropodType) {
             case ARACHNIDA:
@@ -34,6 +36,7 @@ public class ArthropodFactory {
         }
     }
 
+    // Builder 패턴을 사용해 Arthropod 객체를 동적으로 생성
     public static Arthropod create(int bodyRegions, int pairsOfAntennae, RespirationType respiration, MetamorphosisType metamorphosis, int pairsOfWing, int numberOfLegs, String distinction) {
         return new Arthropod.ArthropodBuilder()
                 .setBodyRegions(bodyRegions)
