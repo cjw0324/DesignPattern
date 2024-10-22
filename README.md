@@ -48,4 +48,43 @@ This lab emphasizes the flexibility of the Decorator Pattern, allowing objects t
 
 ---
 
+## Lab05: Singleton Pattern
+In this lab, we implement the **Singleton Pattern**, a creational design pattern that ensures a class has only one instance and provides a global point of access to it.
+
+Key concepts covered in this lab include:
+- **Thread-safe Singleton**: Ensuring that the Singleton instance is created safely in a multithreaded environment using techniques like **Lazy Initialization** and **Double Checked Locking**.
+- **Eager Initialization**: Creating the Singleton instance at class loading time, ensuring thread safety but possibly using unnecessary memory if the instance is not used.
+
+This lab highlights:
+- The proper use of the Singleton pattern to manage global resources (e.g., configuration settings or database connections).
+- Different approaches to handle thread safety in Singleton implementations.
+
+---
+
+## Lab06: Factory Pattern
+In this lab, we explore the **Factory Pattern**, a creational design pattern that provides an interface for creating objects in a super class, but allows subclasses to alter the type of objects that will be created.
+
+Key concepts covered in this lab include:
+- **Simple Factory**: A class with a method that creates instances of various subclasses based on input parameters.
+- **Factory Method**: A more flexible version where the method for creating objects is defined in a base class or interface and implemented by subclasses.
+
+In this lab:
+- A simple factory is used to create different types of `SandwichIngredient` (e.g., `Lettuce`, `Tomato`, `Onion`).
+- We also demonstrate how the Factory Method pattern can be used to create families of related objects.
+
+---
+
+## Lab07: Builder Pattern
+In this lab, we explore the **Builder Pattern**, a creational design pattern that allows the step-by-step construction of complex objects. The Builder pattern separates the construction of an object from its representation, allowing the same construction process to create different representations.
+
+Key concepts covered in this lab include:
+- **Fluent Interface**: Builder pattern often uses a fluent interface where methods return the builder object, allowing for method chaining.
+- **Immutable Objects**: Builders are often used for creating immutable objects, as they allow the object to be constructed in steps, without needing a large constructor with many parameters.
+
+In this lab:
+- We build complex objects such as a **Computer** or **Sandwich**, where the client can choose to build with only certain components (e.g., CPU, GPU, Storage, etc. for a computer, or specific ingredients for a sandwich).
+- This pattern is especially useful for creating objects with many optional fields, where some fields can be skipped during object creation.
+
+---
+
 Each lab includes the code solution and test cases for the given design pattern or principle. Feel free to explore and experiment with each implementation.
