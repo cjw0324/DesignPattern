@@ -19,7 +19,6 @@ public class ImageBlur {
 	public static BufferedImage blur(BufferedImage image)	{
 		if (image == null) return null;
 		BufferedImage newImage = new BufferedImage(image.getWidth(), image.getHeight(), image.getType());
-		//ConvolveOp op = new ConvolveOp(new Kernel(3, 3, blur3x3Kernel));
 		ConvolveOp op = new ConvolveOp(new Kernel(5, 5, blur5x5Kernel));
 		newImage = op.filter(image, null);
 		return newImage;

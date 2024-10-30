@@ -6,7 +6,9 @@ public class MainTest {
 	
     public MainTest() {
 
-		String[] imagefiles = {"cat1.jpg", "cat2.jpg"};	
+		System.out.println("\n\n===== Question 1 Start =====\n\n");
+
+		String[] imagefiles = {"image/question1/cat1.jpg", "image/question1/cat2.jpg"};
    		for (String filename: imagefiles) {
 			String format = ImageUtil.getExtension(filename);
 			BufferedImage image = ImageUtil.load(filename);
@@ -30,7 +32,9 @@ public class MainTest {
 			outputImage = ImageRotate.rotate(image, 45.0);
 			outputFile = ImageUtil.getFullpathWithoutExt(filename) + "ImageRotate" + "." + ImageUtil.getExtension(filename);
 			ImageUtil.save(outputImage, format, outputFile);
-		}
+
+	   	}
+		System.out.println("\n\n===== Question 1 End =====\n\n");
     }
 
 }

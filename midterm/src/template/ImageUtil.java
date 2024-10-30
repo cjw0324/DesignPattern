@@ -14,10 +14,8 @@ public class ImageUtil {
 	// load an image    
     public static BufferedImage load(String fullPath) {
     	try {
-			//this.img = ImageIO.read(new File(fullPath));
 			return toCompatibleImage(ImageIO.read(new File(fullPath)));
 		} catch (IOException e) {
-			System.out.println(fullPath  + " could not be loaded. It's not an image!");
 			e.printStackTrace();
 		}
 		return null;

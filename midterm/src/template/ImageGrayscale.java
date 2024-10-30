@@ -8,7 +8,11 @@ public class ImageGrayscale {
 
 	// grayscale image
 	public static BufferedImage grayscale(BufferedImage image)	{
-		if (image == null) return null;
+		if (image == null){
+			System.out.println("gray null");
+			return null;
+		}
+
 		// creates output image
 		BufferedImage newImage = new BufferedImage(image.getWidth(), image.getHeight(), image.getType());
 		// set the grayscale color 
