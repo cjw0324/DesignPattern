@@ -27,9 +27,10 @@ public class ProgramLauncherCommandInvoker {
     // 마지막으로 실행된 명령을 취소하는 메서드
     public void undoLastCommand() {
         if (!commandStack.isEmpty()) {
-            System.out.println("undo 실행"); // undo 작업을 알리는 출력
             IProgramLauncherCommand lastCommand = commandStack.pop(); // 스택에서 마지막 명령 가져옴
             lastCommand.undo(); // 마지막 명령 취소
+        } else {
+            System.out.println("command Stack is Empty!");
         }
     }
 }

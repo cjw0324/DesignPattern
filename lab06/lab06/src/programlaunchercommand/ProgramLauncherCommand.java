@@ -31,6 +31,8 @@ public class ProgramLauncherCommand implements IProgramLauncherCommand {
             process = pb.start(); // 프로세스 시작
         } catch (IOException e) {
             throw new RuntimeException(e); // 예외 발생 시 RuntimeException으로 래핑하여 던짐
+        } finally {
+            System.out.println("execute : " + executable);
         }
     }
 
@@ -39,7 +41,6 @@ public class ProgramLauncherCommand implements IProgramLauncherCommand {
         // 실행된 프로세스를 종료하는 메서드
         if (process != null) {
             try {
-                System.out.println("undo start"); // undo 작업 시작 알림
                 if (executable.contains("notepad")) {
                     System.out.println("notepad 종료"); // Notepad 종료 알림
                     // Windows 명령어를 통해 Notepad 강제 종료
@@ -48,6 +49,8 @@ public class ProgramLauncherCommand implements IProgramLauncherCommand {
                     System.out.println("edge 종료"); // Edge 종료 알림
                     // Windows 명령어를 통해 Edge 강제 종료
                     new ProcessBuilder("taskkill", "/IM", "msedge.exe", "/F").start();
+                } else {
+                    System.out.println("그림판 종료");
                 }
             } catch (IOException e) {
                 e.printStackTrace(); // 예외 발생 시 스택 추적 출력
