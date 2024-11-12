@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="64833127-6582-478a-8abe-1ad89fab6d39" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/midterm/last/decorator/Component.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/midterm/last/decorator/ConcreteComponent1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/midterm/last/decorator/ConcreteComponent2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/midterm/last/decorator/ConcreteDecorator1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/midterm/last/decorator/ConcreteDecorator2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/midterm/last/decorator/Decorator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/midterm/last/decorator/DecoratorMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/midterm/last/factory/abstractFactory/Pizza.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/midterm/last/factory/abstractFactory/Pizza1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/midterm/last/factory/abstractFactory/Pizza2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/midterm/last/factory/abstractFactory/Pizza3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/midterm/last/factory/abstractFactory/Pizza4.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/midterm/last/factory/abstractFactory/PizzaIngredientFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/midterm/last/factory/abstractFactory/PizzaMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/midterm/last/factory/abstractFactory/PizzaStore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/midterm/last/factory/abstractFactory/Store1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/midterm/last/factory/abstractFactory/Store1IngredientFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/midterm/last/factory/abstractFactory/Store2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/midterm/last/factory/abstractFactory/Store2IngredientFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/midterm/last/factory/factoryMethod/Pizza.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/midterm/last/factory/factoryMethod/Pizza1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/midterm/last/factory/factoryMethod/Pizza2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/midterm/last/factory/factoryMethod/Pizza3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/midterm/last/factory/factoryMethod/Pizza4.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/midterm/last/factory/factoryMethod/PizzaMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/midterm/last/factory/factoryMethod/PizzaStore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/midterm/last/factory/factoryMethod/Store1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/midterm/last/factory/factoryMethod/Store2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/midterm/last/strategy/Breeder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/midterm/last/strategy/BreederMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/midterm/last/strategy/BritishShortHair.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/midterm/last/strategy/Cat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/midterm/last/strategy/Siamese.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/midterm/myBuilder/Sandwich.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/midterm/myBuilder/SandwichMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/midterm/builder/Computer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/midterm/builder/Computer.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package-info" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;cjw0324&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/cjw0324/DesignPattern.git&quot;,
+    &quot;accountId&quot;: &quot;25a6cdc0-7e42-43fa-bc9f-9ccfa468f807&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2neL11P4ECx07pjcvsyFv9q97Sb" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.AbstractPizzaTest.executor": "Run",
+    "Application.BreederMain.executor": "Run",
+    "Application.ComputerMain.executor": "Run",
+    "Application.DecoratorMain.executor": "Run",
+    "Application.DogMain.executor": "Run",
+    "Application.HyundaiStore.executor": "Run",
+    "Application.Lec1MainTest.executor": "Run",
+    "Application.Lec3MainTest.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.MainCafe.executor": "Run",
+    "Application.MainHouse.executor": "Run",
+    "Application.NewsMain.executor": "Run",
+    "Application.PizzaMain.executor": "Run",
+    "Application.PizzaTest.executor": "Run",
+    "Application.SandwichMain.executor": "Run",
+    "Application.Strategy.executor": "Run",
+    "Application.lec4MainTest.executor": "Run",
+    "Application.midterm.factory.abstractFactoryPattern.HyundaiStore.executor": "Run",
+    "Application.midterm.last.factory.abstractFactory.PizzaMain.executor": "Run",
+    "Application.myCarTest.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/cjw/study/SpringMVC/Spring_Study/spring_study/SpringMVC2/springMVC2/login/build.gradle",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\cjw\designPattern\MidtermExam\midtermStudyCode\src\midterm\factory\abstractFactoryPattern" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="midterm.last.factory.abstractFactory" />
+      <recent name="lecture6.abstractFactory" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.midterm.last.factory.abstractFactory.PizzaMain">
+    <configuration name="BreederMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="midterm.last.strategy.BreederMain" />
+      <module name="midtermStudyCode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="midterm.last.strategy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DecoratorMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="midterm.last.decorator.DecoratorMain" />
+      <module name="midtermStudyCode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="midterm.last.decorator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PizzaMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="midterm.last.factory.factoryMethod.PizzaMain" />
+      <module name="midtermStudyCode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="midterm.last.factory.factoryMethod.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SandwichMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="midterm.myBuilder.SandwichMain" />
+      <module name="midtermStudyCode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="midterm.myBuilder.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="midterm.last.factory.abstractFactory.PizzaMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="midterm.last.factory.abstractFactory.PizzaMain" />
+      <module name="midtermStudyCode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="midterm.last.factory.abstractFactory.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.midterm.last.factory.abstractFactory.PizzaMain" />
+        <item itemvalue="Application.PizzaMain" />
+        <item itemvalue="Application.DecoratorMain" />
+        <item itemvalue="Application.BreederMain" />
+        <item itemvalue="Application.SandwichMain" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="64833127-6582-478a-8abe-1ad89fab6d39" name="Changes" comment="" />
+      <created>1729328380695</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1729328380695</updated>
+      <workItem from="1729328381897" duration="3537000" />
+      <workItem from="1729332104549" duration="14549000" />
+      <workItem from="1729402980583" duration="15626000" />
+      <workItem from="1729486020594" duration="20501000" />
+      <workItem from="1729654885851" duration="8201000" />
+      <workItem from="1729835833105" duration="380000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

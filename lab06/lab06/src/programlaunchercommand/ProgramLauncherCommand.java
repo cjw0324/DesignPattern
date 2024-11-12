@@ -1,37 +1,12 @@
 package programlaunchercommand;
 
+import java.io.IOException;
+
 public class ProgramLauncherCommand implements IProgramLauncherCommand {
 
     private String executable;
     private String icon;
     private Process process;
-
-    public String getExecutable() {
-        return executable;
-    }
-
-    public ProgramLauncherCommand setExecutable(String executable) {
-        this.executable = executable;
-        return this;
-    }
-
-    public String getIcon() {
-        return icon;
-    }
-
-    public ProgramLauncherCommand setIcon(String icon) {
-        this.icon = icon;
-        return this;
-    }
-
-    public Process getProcess() {
-        return process;
-    }
-
-    public ProgramLauncherCommand setProcess(Process process) {
-        this.process = process;
-        return this;
-    }
 
     public ProgramLauncherCommand(String executable, String icon) {
         this.executable = executable;
@@ -43,16 +18,43 @@ public class ProgramLauncherCommand implements IProgramLauncherCommand {
     public void execute() {
         // 실행
         try {
-            ProcessBuilder pb = new ProcessBuilder(executable.split(""));
+            ProcessBuilder pb;
+            if (executable.split(" ").length > 1) {
+                pb = new ProcessBuilder(executable.split(" "));
+            }
+            else {
+                // 단일 명령인 경우
+                pb = new ProcessBuilder(executable);
+            }
             process = pb.start();
-        } catch (Exception e) {
-
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
 
     }
 
     @Override
     public void undo() {
-        //되돌아가기
+        if (process != null) {
+            // Windows에서 Notepad와 Edge를 강제로 종료하는 추가 로직
+            try {
+                System.out.println("undo start");
+                if (executable.contains("notepad")) {
+                    System.out.println("notepad 종료");
+                    new ProcessBuilder("taskkill", "/IM", "notepad.exe", "/F").start();
+                } else if (executable.contains("msedge")) {
+                    System.out.println("edge 종료");
+                    new ProcessBuilder( "taskkill", "/IM", "msedge.exe", "/F").start();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            } finally {
+                process.destroy();
+            }
+        }
+    }
+
+    public String getIcon() {
+        return icon;
     }
 }
