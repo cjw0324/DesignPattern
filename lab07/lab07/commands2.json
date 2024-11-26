@@ -1,0 +1,1 @@
+{"commands":[{"name":"Notepad","icon":"images\/Notepad-Icon.png","executable":"notepad"},{"name":"Paint","icon":"images\/MS-Paint-Icon.png","executable":"mspaint"},{"name":"Edge","icon":"images\/MS-Edge-Icon.png","executable":"cmd \/c start msedge"}]}
